@@ -21,7 +21,7 @@ public class PathFinder {
 	}
 	public void instantiateNodes() {
 		
-		node = new Node[gp.maxWorldCol][gp.maxScreenRow];
+		node = new Node[gp.maxWorldCol][gp.maxWorldRow];
 		
 		int col = 0;
 		int row = 0;
