@@ -503,7 +503,7 @@ public class UI {
 			int dFrameX = frameX;
 			int dFrameY = frameY + frameHeight;
 			int dFrameWidth = frameWidth;
-			int dFrameHeight = gp.tileSize*3;
+			int dFrameHeight = gp.tileSize*4;
 			
 			// DRAW DESCRIPTION TEXT
 			int textX = dFrameX + 20;
