@@ -23,8 +23,8 @@ public class NPC_Merchant extends Entity{
 		solidArea.y = 16;
 		solidAreaDefaultX = solidArea.x;
 		solidAreaDefaultY = solidArea.y;
-		solidArea.width = 32;
-		solidArea.height = 32;
+		solidArea.width = 30;
+		solidArea.height = 30;
 		
 		getImage();
 		setDialogue();
@@ -63,18 +63,7 @@ public class NPC_Merchant extends Entity{
 	public void update() {
 		
 		setAction();
-		
-		collisionOn = false;
-		gp.cChecker.checkTile(this);
-		gp.cChecker.checkObject(this, false);
-		gp.cChecker.checkEntity(this, gp.npc);
-		gp.cChecker.checkEntity(this, gp.monster);
-		gp.cChecker.checkEntity(this, gp.iTile);
-		boolean contactPlayer = gp.cChecker.checkPlayer(this);
-		
-		if(this.type == type_monster && contactPlayer == true) {
-			damagePlayer(attack);
-		}
+		checkCollision();
 		
 		// IF COLLISION IS FALSE, PLAYER CAN MOVE
 		if(collisionOn == false) {
