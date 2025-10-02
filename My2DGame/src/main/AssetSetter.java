@@ -4,6 +4,7 @@ import entity.NPC_Merchant;
 import entity.NPC_OldMan;
 import monster.MON_GreenSlime;
 import object.OBJ_Axe;
+import object.OBJ_Chest;
 import object.OBJ_Coin_Bronze;
 import object.OBJ_Door;
 import object.OBJ_Heart;
@@ -32,6 +33,18 @@ public class AssetSetter {
 		gp.obj[mapNum][i] = new OBJ_Key(gp);
 		gp.obj[mapNum][i].worldX = gp.tileSize*33;
 		gp.obj[mapNum][i].worldY = gp.tileSize*7;
+		i++;
+		gp.obj[mapNum][i] = new OBJ_Door(gp);
+		gp.obj[mapNum][i].worldX = gp.tileSize*14;
+		gp.obj[mapNum][i].worldY = gp.tileSize*28;
+		i++;
+		gp.obj[mapNum][i] = new OBJ_Door(gp);
+		gp.obj[mapNum][i].worldX = gp.tileSize*12;
+		gp.obj[mapNum][i].worldY = gp.tileSize*12;
+		i++;
+		gp.obj[mapNum][i] = new OBJ_Chest(gp, new OBJ_Key(gp));
+		gp.obj[mapNum][i].worldX = gp.tileSize*30;
+		gp.obj[mapNum][i].worldY = gp.tileSize*29;
 		i++;
 	}
 	public void setNPC() {
@@ -102,5 +115,14 @@ public class AssetSetter {
 		gp.iTile[mapNum][i] = new IT_DryTree(gp,11,41); i++;
 		gp.iTile[mapNum][i] = new IT_DryTree(gp,10,41); i++;
 		gp.iTile[mapNum][i] = new IT_DryTree(gp,10,40); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp,29,31); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp,28,31); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp,27,31); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp,27,30); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp,27,29); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp,27,28); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp,26,27); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp,25,27); i++;
+		
 	}
 }
