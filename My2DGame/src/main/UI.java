@@ -20,7 +20,7 @@ public class UI {
 
 	GamePanel gp;
 	Graphics2D g2;
-	Font maruMonica, purisaB;
+	public Font maruMonica, purisaB;
 	BufferedImage heart_full, heart_half, heart_blank, crystal_full, crystal_blank, coin;
 	public boolean messageOn = false;
 //	public String message = "";
@@ -752,8 +752,9 @@ public class UI {
 		g2.drawString("Move", textX, textY); textY += gp.tileSize;
 		g2.drawString("Confirm/Attack", textX, textY); textY += gp.tileSize;
 		g2.drawString("Shoot/Cast", textX, textY); textY += gp.tileSize;
-		g2.drawString("Character Screen", textX, textY); textY += gp.tileSize;
+		g2.drawString("Inventory", textX, textY); textY += gp.tileSize;
 		g2.drawString("Pause", textX, textY); textY += gp.tileSize;
+		g2.drawString("Map/Mini Map", textX, textY); textY += gp.tileSize;
 		g2.drawString("Options", textX, textY); textY += gp.tileSize;
 		
 		textX = frameX + gp.tileSize*6;
@@ -763,6 +764,7 @@ public class UI {
 		g2.drawString("SPACE", textX, textY); textY += gp.tileSize;
 		g2.drawString("C", textX, textY); textY += gp.tileSize;
 		g2.drawString("P", textX, textY); textY += gp.tileSize;
+		g2.drawString("M/X", textX, textY); textY += gp.tileSize;
 		g2.drawString("ESC", textX, textY); textY += gp.tileSize;
 		
 		// BACK
