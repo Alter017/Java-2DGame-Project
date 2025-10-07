@@ -8,7 +8,7 @@ import entity.Entity;
 public class KeyHandler implements KeyListener{
 	
 	GamePanel gp;
-	public boolean upPressed, downPressed, leftPressed, rightPressed, enterPressed, shotKeyPressed;
+	public boolean upPressed, downPressed, leftPressed, rightPressed, enterPressed, shotKeyPressed, shiftPressed;
 	// DEBUG
 	boolean showDebugText = false;
 	
@@ -175,6 +175,9 @@ public class KeyHandler implements KeyListener{
 			else {
 				gp.map.miniMapOn = false;
 			}
+		}
+		if(code == KeyEvent.VK_SHIFT) {
+			shiftPressed = true;
 		}
 		
 		// DEBUG
@@ -416,6 +419,12 @@ public class KeyHandler implements KeyListener{
 		}
 		if(code == KeyEvent.VK_SPACE) {
 			shotKeyPressed = false;
+		}
+		if(code == KeyEvent.VK_ENTER) {
+			enterPressed = false;
+		}
+		if(code == KeyEvent.VK_SHIFT) {
+			shiftPressed = false;
 		}
 		
 	}
