@@ -22,7 +22,7 @@ public class MON_GreenSlime extends Entity{
 		name = "Green Slime";
 		defaultSpeed = 1;
 		speed = defaultSpeed;
-		maxLife = 10;
+		maxLife = 4;
 		life = maxLife;
 		attack = 3;
 		defense = 0;
