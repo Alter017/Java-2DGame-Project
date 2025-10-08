@@ -107,6 +107,7 @@ public class Player extends Entity{
 		attacking = false;
 		guarding = false;
 		knockBack = false;
+		speed = defaultSpeed;
 		lightUpdated = true;
 	}
 	public void setItems() {
@@ -125,6 +126,24 @@ public class Player extends Entity{
 	}
 	public int getDefense() {
 		return defense = dexterity * currentShield.defenseValue;
+	}
+	public int getCurrentWeaponSlot() {
+		int currentWeaponSlot = 0;
+		for(int i = 0; i < inventory.size(); i++) {
+			if(inventory.get(i) == currentWeapon) {
+				currentWeaponSlot = i;
+			}
+		}
+		return currentWeaponSlot;
+	}
+	public int getCurrentShieldSlot() {
+		int currentShieldSlot = 0;
+		for(int i = 0; i < inventory.size(); i++) {
+			if(inventory.get(i) == currentShield) {
+				currentShieldSlot = i;
+			}
+		}
+		return currentShieldSlot;
 	}
 	public void getImage() {
 		

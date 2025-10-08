@@ -37,8 +37,8 @@ public class MON_Orc extends Entity{
 		solidAreaDefaultY = solidArea.y;
 		attackArea.width = 48;
 		attackArea.height = 48;
-		motion1_duration = 10;
-		motion2_duration = 30;
+		motion1_duration = 15;
+		motion2_duration = 35;
 		
 		getImage();
 		getAttackImage();
