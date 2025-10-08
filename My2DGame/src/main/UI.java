@@ -752,20 +752,20 @@ public class UI {
 		g2.drawString("Move", textX, textY); textY += gp.tileSize;
 		g2.drawString("Confirm/Attack", textX, textY); textY += gp.tileSize;
 		g2.drawString("Shoot/Cast", textX, textY); textY += gp.tileSize;
+		g2.drawString("Block attack", textX, textY); textY += gp.tileSize;
 		g2.drawString("Inventory", textX, textY); textY += gp.tileSize;
-		g2.drawString("Pause", textX, textY); textY += gp.tileSize;
 		g2.drawString("Map/Mini Map", textX, textY); textY += gp.tileSize;
-		g2.drawString("Options", textX, textY); textY += gp.tileSize;
+		g2.drawString("Options/Pause", textX, textY); textY += gp.tileSize;
 		
 		textX = frameX + gp.tileSize*6;
 		textY = frameY + gp.tileSize*2;
 		g2.drawString("WASD", textX, textY); textY += gp.tileSize;
 		g2.drawString("ENTER", textX, textY); textY += gp.tileSize;
 		g2.drawString("SPACE", textX, textY); textY += gp.tileSize;
+		g2.drawString("SHIFT", textX, textY); textY += gp.tileSize;
 		g2.drawString("C", textX, textY); textY += gp.tileSize;
-		g2.drawString("P", textX, textY); textY += gp.tileSize;
 		g2.drawString("M/X", textX, textY); textY += gp.tileSize;
-		g2.drawString("ESC", textX, textY); textY += gp.tileSize;
+		g2.drawString("ESC/P", textX, textY); textY += gp.tileSize;
 		
 		// BACK
 		textX = frameX + gp.tileSize;
@@ -801,6 +801,7 @@ public class UI {
 			if(gp.keyH.enterPressed == true) {
 				subState = 0;
 				gp.gameState = gp.titleState;
+				gp.resetGame(true);
 				titleScreenState = 0;
 				//gp.stopMusic();
 				gp.playMusic(0);
