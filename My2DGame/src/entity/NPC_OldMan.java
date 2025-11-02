@@ -22,6 +22,8 @@ public class NPC_OldMan extends Entity {
 		solidArea.width = 30;
 		solidArea.height = 30;
 		
+		dialogueSet = -1;
+		
 		getImage();
 		setDialogue();
 	}
@@ -38,10 +40,16 @@ public class NPC_OldMan extends Entity {
 	}
 	public void setDialogue() {
 		
-		dialogues[0] = "Hello, lad.";
-		dialogues[1] = "So you've come to this island to \nfind the treasure?";
-		dialogues[2] = "I used to be a great wizard but \nnow... I'm a bit too old for taking \nan adventure.";
-		dialogues[3] = "Well, good luck young man!";
+		dialogues[0][0] = "Hello, lad.";
+		dialogues[0][1] = "So you've come to this island to \nfind the treasure?";
+		dialogues[0][2] = "I used to be a great wizard but \nnow... I'm a bit too old for taking \nan adventure.";
+		dialogues[0][3] = "Well, good luck young man!";
+		
+		dialogues[1][0] = "If you get tired, take a sip from\nthe lake, it is magical...";
+		dialogues[1][1] = "However, monsters come back when\nyou do so, I have no idea why.";
+		dialogues[1][2] = "In any case, take care young man.";
+		
+		dialogues[2][0] = "I wonder how to open that door...";
 		
 	}
 	public void setAction() {
@@ -83,8 +91,16 @@ public class NPC_OldMan extends Entity {
 	}
 	public void speak() {
 		
-		super.speak();
+		// Do this character specific stuff
+		facePlayer();
+		startDialogue(this, dialogueSet);
 		
-		onPath = true;
+		dialogueSet++;
+		
+		if(dialogues[dialogueSet][0] == null) {
+			dialogueSet--;
+		}
+		
+		//onPath = true;
 	}
 }
