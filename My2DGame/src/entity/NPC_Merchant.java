@@ -75,8 +75,8 @@ public class NPC_Merchant extends Entity{
 			switch(direction) {
 			case "up": worldY -= speed; break;
 			case "down": worldY += speed; break;
-			case "left": worldX -= speed; break;
-			case "right": worldX += speed; break;
+			//case "left": worldX -= speed; break;
+			//case "right": worldX += speed; break;
 			}
 		}
 		
