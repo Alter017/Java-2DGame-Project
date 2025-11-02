@@ -6,13 +6,14 @@ import main.GamePanel;
 public class OBJ_Chest extends Entity{
 	
 	GamePanel gp;
+	public static final String objName = "Chest";
 
 	public OBJ_Chest(GamePanel gp) {
 		super(gp);
 		this.gp = gp;
 		
 		type = type_obstacle;
-		name = "Chest";
+		name = objName;
 		image = setup("/objects/chest", gp.tileSize, gp.tileSize);
 		image2 = setup("/objects/chest_opened", gp.tileSize, gp.tileSize);
 		down1 = image;
@@ -32,11 +33,13 @@ public class OBJ_Chest extends Entity{
 	}
 	public void setDialogue() {
 		
-		dialogues[0][0] = "You opened the chest and found a " + loot.name + "!\nBut you don't have enough space!";
-		dialogues[1][0] = "You opened the chest and found a " + loot.name + "!\nYou obtained the " + loot.name + "!";
+		dialogues[0][0] = "You opened the chest and found a\n" + loot.name + "!\nBut you don't have enough space!";
+		dialogues[1][0] = "You opened the chest and found a\n" + loot.name + "!\nYou obtained the " + loot.name + "!";
 		dialogues[2][0] = "It's empty.";
 	}
 	public void interact() {
+		
+		setDialogue();
 		
 		if(opened == false) {
 			gp.playSE(3);
