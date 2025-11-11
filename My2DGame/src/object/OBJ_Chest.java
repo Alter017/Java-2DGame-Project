@@ -39,8 +39,6 @@ public class OBJ_Chest extends Entity{
 	}
 	public void interact() {
 		
-		setDialogue();
-		
 		if(opened == false) {
 			gp.playSE(3);
 			

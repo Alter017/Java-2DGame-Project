@@ -96,6 +96,7 @@ public class Player extends Entity{
 	}
 	public void setDefaultPositions() {
 		
+		gp.currentMap = 0;
 		worldX = gp.tileSize * 23;
 		worldY = gp.tileSize * 21;
 		direction = "down";
@@ -372,12 +373,15 @@ public class Player extends Entity{
 		if(mana > maxMana) {
 			mana = maxMana;
 		}
-		if(life <= 0) {
-			gp.gameState = gp.gameOverState;
-			gp.ui.commandNum = -1;
-			gp.stopMusic();
-			gp.playSE(12);
+		if(keyH.godModeOn == false) {
+			if(life <= 0) {
+				gp.gameState = gp.gameOverState;
+				gp.ui.commandNum = -1;
+				gp.stopMusic();
+				gp.playSE(12);
+			}
 		}
+
 	}
 	public void pickUpObject(int i) {
 		
