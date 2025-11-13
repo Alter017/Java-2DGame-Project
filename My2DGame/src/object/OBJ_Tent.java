@@ -18,17 +18,23 @@ public class OBJ_Tent extends Entity{
 		description = "[" + name + "]\nUseful for sleeping\nalmost everywhere.\n(ONLY 1 USE)";
 		price = 300;
 		stackable = true;
+		
+		setDialogue();
+	}
+	public void setDialogue() {
+		
+		dialogues[0][0] = "Are you going to sleep now?!\nIt is a beautiful day out there!";
+		
+		dialogues[1][0] = "Are you going to sleep now?!\nThe sun is already coming up!";
 	}
 	public boolean use(Entity entity) {
 		
 		if(gp.eManager.lighting.dayState == gp.eManager.lighting.day) {
-			gp.gameState = gp.dialogueState;
-			gp.ui.currentDialogue = "Are you going to sleep now?!\nIt is a beautiful day out there!";
+			startDialogue(this, 0);
 			return false;
 		}
 		else if(gp.eManager.lighting.dayState == gp.eManager.lighting.dawn) {
-			gp.gameState = gp.dialogueState;
-			gp.ui.currentDialogue = "Are you going to sleep now?!\nThe sun is already coming up!";
+			startDialogue(this, 1);
 			return false;
 		}
 		else {
