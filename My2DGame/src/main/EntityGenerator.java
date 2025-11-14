@@ -2,6 +2,7 @@ package main;
 
 import entity.Entity;
 import object.OBJ_Axe;
+import object.OBJ_BlueHeart;
 import object.OBJ_Boots;
 import object.OBJ_Chest;
 import object.OBJ_Coin_Bronze;
@@ -33,6 +34,7 @@ public class EntityGenerator {
 		
 		switch(itemName) {
 		case OBJ_Axe.objName: obj = new OBJ_Axe(gp); break;
+		case OBJ_BlueHeart.objName: obj = new OBJ_BlueHeart(gp); break;
 		case OBJ_Boots.objName: obj = new OBJ_Boots(gp); break;
 		case OBJ_Chest.objName: obj = new OBJ_Chest(gp); break;
 		case OBJ_Coin_Bronze.objName: obj = new OBJ_Coin_Bronze(gp); break;
